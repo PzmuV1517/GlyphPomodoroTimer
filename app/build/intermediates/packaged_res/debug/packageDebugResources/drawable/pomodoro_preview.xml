@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="100dp"
+    android:height="100dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+
+    <!-- Clock circle -->
+    <path
+        android:pathData="M50,10 A40,40 0 1,1 49.99,10"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="3"
+        android:fillColor="@android:color/transparent"/>
+
+    <!-- Clock hands -->
+    <path
+        android:pathData="M50,50 L50,25"
+        android:strokeColor="#FF0000"
+        android:strokeWidth="2"/>
+
+    <path
+        android:pathData="M50,50 L65,50"
+        android:strokeColor="#FF0000"
+        android:strokeWidth="2"/>
+
+    <!-- Center dot -->
+    <path
+        android:pathData="M48,48 L52,48 L52,52 L48,52 Z"
+        android:fillColor="#FF0000"/>
+
+    <!-- Timer text -->
+    <path
+        android:pathData="M35,75 L35,85 L40,85 L40,80 L43,80 L43,85 L48,85 L48,75 L43,75 L43,78 L40,78 L40,75 Z"
+        android:fillColor="#00FF00"/>
+
+    <path
+        android:pathData="M52,75 L57,75 L57,78 L54,78 L54,80 L57,80 L57,83 L52,83 L52,80 L55,80 L55,78 L52,78 Z"
+        android:fillColor="#00FF00"/>
+</vector>

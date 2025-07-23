@@ -1,0 +1,163 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.glyphpomodorotimer"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="35"
+9        android:targetSdkVersion="36" />
+10
+11    <!-- Required permission for Glyph Matrix -->
+12    <uses-permission android:name="com.nothing.ketchum.permission.ENABLE" />
+12-->C:\Users\child\AndroidStudioProjects\GlyphPomodoroTimer\app\src\main\AndroidManifest.xml:6:5-76
+12-->C:\Users\child\AndroidStudioProjects\GlyphPomodoroTimer\app\src\main\AndroidManifest.xml:6:22-74
+13
+14    <permission
+14-->[androidx.core:core:1.13.0] C:\Users\child\.gradle\caches\8.13\transforms\adbd1bf8c0dde738d4ae689d2cff7ec7\transformed\core-1.13.0\AndroidManifest.xml:22:5-24:47
+15        android:name="com.example.glyphpomodorotimer.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+15-->[androidx.core:core:1.13.0] C:\Users\child\.gradle\caches\8.13\transforms\adbd1bf8c0dde738d4ae689d2cff7ec7\transformed\core-1.13.0\AndroidManifest.xml:23:9-81
+16        android:protectionLevel="signature" />
+16-->[androidx.core:core:1.13.0] C:\Users\child\.gradle\caches\8.13\transforms\adbd1bf8c0dde738d4ae689d2cff7ec7\transformed\core-1.13.0\AndroidManifest.xml:24:9-44
+17
+18    <uses-permission android:name="com.example.glyphpomodorotimer.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+18-->[androidx.core:core:1.13.0] C:\Users\child\.gradle\caches\8.13\transforms\adbd1bf8c0dde738d4ae689d2cff7ec7\transformed\core-1.13.0\AndroidManifest.xml:26:5-97
+18-->[androidx.core:core:1.13.0] C:\Users\child\.gradle\caches\8.13\transforms\adbd1bf8c0dde738d4ae689d2cff7ec7\transformed\core-1.13.0\AndroidManifest.xml:26:22-94
+19
+20    <application
+20-->C:\Users\child\AndroidStudioProjects\GlyphPomodoroTimer\app\src\main\AndroidManifest.xml:8:5-46:19
+21        android:allowBackup="true"
+21-->C:\Users\child\AndroidStudioProjects\GlyphPomodoroTimer\app\src\main\AndroidManifest.xml:9:9-35
+22        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+22-->[androidx.core:core:1.13.0] C:\Users\child\.gradle\caches\8.13\transforms\adbd1bf8c0dde738d4ae689d2cff7ec7\transformed\core-1.13.0\AndroidManifest.xml:28:18-86
+23        android:dataExtractionRules="@xml/data_extraction_rules"
+23-->C:\Users\child\AndroidStudioProjects\GlyphPomodoroTimer\app\src\main\AndroidManifest.xml:10:9-65
+24        android:extractNativeLibs="false"
+25        android:fullBackupContent="@xml/backup_rules"
+25-->C:\Users\child\AndroidStudioProjects\GlyphPomodoroTimer\app\src\main\AndroidManifest.xml:11:9-54
+26        android:icon="@mipmap/ic_launcher"
+26-->C:\Users\child\AndroidStudioProjects\GlyphPomodoroTimer\app\src\main\AndroidManifest.xml:12:9-43
+27        android:label="@string/app_name"
+27-->C:\Users\child\AndroidStudioProjects\GlyphPomodoroTimer\app\src\main\AndroidManifest.xml:13:9-41
+28        android:roundIcon="@mipmap/ic_launcher_round"
+28-->C:\Users\child\AndroidStudioProjects\GlyphPomodoroTimer\app\src\main\AndroidManifest.xml:14:9-54
+29        android:supportsRtl="true"
+29-->C:\Users\child\AndroidStudioProjects\GlyphPomodoroTimer\app\src\main\AndroidManifest.xml:15:9-35
+30        android:theme="@style/Theme.GlyphPomodoroTimer" >
+30-->C:\Users\child\AndroidStudioProjects\GlyphPomodoroTimer\app\src\main\AndroidManifest.xml:16:9-56
+31
+32        <!-- Pomodoro Timer Glyph Toy Service -->
+33        <service
+33-->C:\Users\child\AndroidStudioProjects\GlyphPomodoroTimer\app\src\main\AndroidManifest.xml:19:9-44:19
+34            android:name="com.example.glyphpomodorotimer.PomodoroTimerService"
+34-->C:\Users\child\AndroidStudioProjects\GlyphPomodoroTimer\app\src\main\AndroidManifest.xml:19:18-54
+35            android:exported="true" >
+35-->C:\Users\child\AndroidStudioProjects\GlyphPomodoroTimer\app\src\main\AndroidManifest.xml:20:13-36
+36            <intent-filter>
+36-->C:\Users\child\AndroidStudioProjects\GlyphPomodoroTimer\app\src\main\AndroidManifest.xml:21:13-23:29
+37                <action android:name="com.nothing.glyph.TOY" />
+37-->C:\Users\child\AndroidStudioProjects\GlyphPomodoroTimer\app\src\main\AndroidManifest.xml:22:17-63
+37-->C:\Users\child\AndroidStudioProjects\GlyphPomodoroTimer\app\src\main\AndroidManifest.xml:22:25-61
+38            </intent-filter>
+39
+40            <!-- Required: Toy name displayed in settings -->
+41            <meta-data
+41-->C:\Users\child\AndroidStudioProjects\GlyphPomodoroTimer\app\src\main\AndroidManifest.xml:26:13-28:63
+42                android:name="com.nothing.glyph.toy.name"
+42-->C:\Users\child\AndroidStudioProjects\GlyphPomodoroTimer\app\src\main\AndroidManifest.xml:27:17-58
+43                android:resource="@string/pomodoro_toy_name" />
+43-->C:\Users\child\AndroidStudioProjects\GlyphPomodoroTimer\app\src\main\AndroidManifest.xml:28:17-61
+44
+45            <!-- Required: Preview image for settings -->
+46            <meta-data
+46-->C:\Users\child\AndroidStudioProjects\GlyphPomodoroTimer\app\src\main\AndroidManifest.xml:31:13-33:64
+47                android:name="com.nothing.glyph.toy.image"
+47-->C:\Users\child\AndroidStudioProjects\GlyphPomodoroTimer\app\src\main\AndroidManifest.xml:32:17-59
+48                android:resource="@drawable/pomodoro_preview" />
+48-->C:\Users\child\AndroidStudioProjects\GlyphPomodoroTimer\app\src\main\AndroidManifest.xml:33:17-62
+49
+50            <!-- Optional: Description of the toy -->
+51            <meta-data
+51-->C:\Users\child\AndroidStudioProjects\GlyphPomodoroTimer\app\src\main\AndroidManifest.xml:36:13-38:66
+52                android:name="com.nothing.glyph.toy.summary"
+52-->C:\Users\child\AndroidStudioProjects\GlyphPomodoroTimer\app\src\main\AndroidManifest.xml:37:17-61
+53                android:resource="@string/pomodoro_toy_summary" />
+53-->C:\Users\child\AndroidStudioProjects\GlyphPomodoroTimer\app\src\main\AndroidManifest.xml:38:17-64
+54
+55            <!-- Optional: Enable long press functionality -->
+56            <meta-data
+56-->C:\Users\child\AndroidStudioProjects\GlyphPomodoroTimer\app\src\main\AndroidManifest.xml:41:13-43:36
+57                android:name="com.nothing.glyph.toy.longpress"
+57-->C:\Users\child\AndroidStudioProjects\GlyphPomodoroTimer\app\src\main\AndroidManifest.xml:42:17-63
+58                android:value="1" />
+58-->C:\Users\child\AndroidStudioProjects\GlyphPomodoroTimer\app\src\main\AndroidManifest.xml:43:17-34
+59        </service>
+60
+61        <provider
+61-->[androidx.emoji2:emoji2:1.3.0] C:\Users\child\.gradle\caches\8.13\transforms\60ad9587181d9ac47b17af7cceba718d\transformed\emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
+62            android:name="androidx.startup.InitializationProvider"
+62-->[androidx.emoji2:emoji2:1.3.0] C:\Users\child\.gradle\caches\8.13\transforms\60ad9587181d9ac47b17af7cceba718d\transformed\emoji2-1.3.0\AndroidManifest.xml:25:13-67
+63            android:authorities="com.example.glyphpomodorotimer.androidx-startup"
+63-->[androidx.emoji2:emoji2:1.3.0] C:\Users\child\.gradle\caches\8.13\transforms\60ad9587181d9ac47b17af7cceba718d\transformed\emoji2-1.3.0\AndroidManifest.xml:26:13-68
+64            android:exported="false" >
+64-->[androidx.emoji2:emoji2:1.3.0] C:\Users\child\.gradle\caches\8.13\transforms\60ad9587181d9ac47b17af7cceba718d\transformed\emoji2-1.3.0\AndroidManifest.xml:27:13-37
+65            <meta-data
+65-->[androidx.emoji2:emoji2:1.3.0] C:\Users\child\.gradle\caches\8.13\transforms\60ad9587181d9ac47b17af7cceba718d\transformed\emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
+66                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+66-->[androidx.emoji2:emoji2:1.3.0] C:\Users\child\.gradle\caches\8.13\transforms\60ad9587181d9ac47b17af7cceba718d\transformed\emoji2-1.3.0\AndroidManifest.xml:30:17-75
+67                android:value="androidx.startup" />
+67-->[androidx.emoji2:emoji2:1.3.0] C:\Users\child\.gradle\caches\8.13\transforms\60ad9587181d9ac47b17af7cceba718d\transformed\emoji2-1.3.0\AndroidManifest.xml:31:17-49
+68            <meta-data
+68-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\child\.gradle\caches\8.13\transforms\bd49396ca2dafe9ce896b76ae0dc7821\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:29:13-31:52
+69                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+69-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\child\.gradle\caches\8.13\transforms\bd49396ca2dafe9ce896b76ae0dc7821\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:30:17-78
+70                android:value="androidx.startup" />
+70-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\child\.gradle\caches\8.13\transforms\bd49396ca2dafe9ce896b76ae0dc7821\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:31:17-49
+71            <meta-data
+71-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\child\.gradle\caches\8.13\transforms\46c413aa473bd610eb578a8c7d39d8f2\transformed\profileinstaller-1.3.1\AndroidManifest.xml:29:13-31:52
+72                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+72-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\child\.gradle\caches\8.13\transforms\46c413aa473bd610eb578a8c7d39d8f2\transformed\profileinstaller-1.3.1\AndroidManifest.xml:30:17-85
+73                android:value="androidx.startup" />
+73-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\child\.gradle\caches\8.13\transforms\46c413aa473bd610eb578a8c7d39d8f2\transformed\profileinstaller-1.3.1\AndroidManifest.xml:31:17-49
+74        </provider>
+75
+76        <receiver
+76-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\child\.gradle\caches\8.13\transforms\46c413aa473bd610eb578a8c7d39d8f2\transformed\profileinstaller-1.3.1\AndroidManifest.xml:34:9-52:20
+77            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+77-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\child\.gradle\caches\8.13\transforms\46c413aa473bd610eb578a8c7d39d8f2\transformed\profileinstaller-1.3.1\AndroidManifest.xml:35:13-76
+78            android:directBootAware="false"
+78-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\child\.gradle\caches\8.13\transforms\46c413aa473bd610eb578a8c7d39d8f2\transformed\profileinstaller-1.3.1\AndroidManifest.xml:36:13-44
+79            android:enabled="true"
+79-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\child\.gradle\caches\8.13\transforms\46c413aa473bd610eb578a8c7d39d8f2\transformed\profileinstaller-1.3.1\AndroidManifest.xml:37:13-35
+80            android:exported="true"
+80-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\child\.gradle\caches\8.13\transforms\46c413aa473bd610eb578a8c7d39d8f2\transformed\profileinstaller-1.3.1\AndroidManifest.xml:38:13-36
+81            android:permission="android.permission.DUMP" >
+81-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\child\.gradle\caches\8.13\transforms\46c413aa473bd610eb578a8c7d39d8f2\transformed\profileinstaller-1.3.1\AndroidManifest.xml:39:13-57
+82            <intent-filter>
+82-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\child\.gradle\caches\8.13\transforms\46c413aa473bd610eb578a8c7d39d8f2\transformed\profileinstaller-1.3.1\AndroidManifest.xml:40:13-42:29
+83                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+83-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\child\.gradle\caches\8.13\transforms\46c413aa473bd610eb578a8c7d39d8f2\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:17-91
+83-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\child\.gradle\caches\8.13\transforms\46c413aa473bd610eb578a8c7d39d8f2\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:25-88
+84            </intent-filter>
+85            <intent-filter>
+85-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\child\.gradle\caches\8.13\transforms\46c413aa473bd610eb578a8c7d39d8f2\transformed\profileinstaller-1.3.1\AndroidManifest.xml:43:13-45:29
+86                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+86-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\child\.gradle\caches\8.13\transforms\46c413aa473bd610eb578a8c7d39d8f2\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:17-85
+86-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\child\.gradle\caches\8.13\transforms\46c413aa473bd610eb578a8c7d39d8f2\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:25-82
+87            </intent-filter>
+88            <intent-filter>
+88-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\child\.gradle\caches\8.13\transforms\46c413aa473bd610eb578a8c7d39d8f2\transformed\profileinstaller-1.3.1\AndroidManifest.xml:46:13-48:29
+89                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+89-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\child\.gradle\caches\8.13\transforms\46c413aa473bd610eb578a8c7d39d8f2\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:17-88
+89-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\child\.gradle\caches\8.13\transforms\46c413aa473bd610eb578a8c7d39d8f2\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:25-85
+90            </intent-filter>
+91            <intent-filter>
+91-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\child\.gradle\caches\8.13\transforms\46c413aa473bd610eb578a8c7d39d8f2\transformed\profileinstaller-1.3.1\AndroidManifest.xml:49:13-51:29
+92                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+92-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\child\.gradle\caches\8.13\transforms\46c413aa473bd610eb578a8c7d39d8f2\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:17-95
+92-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\child\.gradle\caches\8.13\transforms\46c413aa473bd610eb578a8c7d39d8f2\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:25-92
+93            </intent-filter>
+94        </receiver>
+95    </application>
+96
+97</manifest>

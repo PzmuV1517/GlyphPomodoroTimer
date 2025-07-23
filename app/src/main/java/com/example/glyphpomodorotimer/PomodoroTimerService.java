@@ -149,10 +149,9 @@ public class PomodoroTimerService extends Service {
             int minutes = mCurrentTimeSeconds / 60;
             int seconds = mCurrentTimeSeconds % 60;
             String timeText = String.format("%02d:%02d", minutes, seconds);
-            String phaseText = mIsWorkSession ? "WORK" : "BREAK";
 
             // Create timer display with clear numbers
-            Bitmap timerBitmap = createTimerBitmap(timeText, phaseText, mIsWorkSession);
+            Bitmap timerBitmap = createTimerBitmap(timeText, mIsWorkSession);
 
             GlyphMatrixObject.Builder objectBuilder = new GlyphMatrixObject.Builder();
             GlyphMatrixObject timerObject = objectBuilder
@@ -196,7 +195,7 @@ public class PomodoroTimerService extends Service {
         return bitmap;
     }
 
-    private Bitmap createTimerBitmap(String timeText, String phaseText, boolean isWorkSession) {
+    private Bitmap createTimerBitmap(String timeText, boolean isWorkSession) {
         Paint paint = new Paint();
         paint.setColor(Color.WHITE);
         paint.setTypeface(Typeface.MONOSPACE);
@@ -208,18 +207,16 @@ public class PomodoroTimerService extends Service {
         Canvas canvas = new Canvas(bitmap);
         canvas.drawColor(Color.BLACK);
 
-        // Phase indicator at top (within circle bounds)
-        paint.setTextSize(3);
-        canvas.drawText(phaseText, 12.5f, 5, paint);
-
-        // Main timer numbers in center (largest readable size for circle)
-        paint.setTextSize(6);
-        canvas.drawText(timeText, 12.5f, 14, paint);
-
-        // Simple dot indicator at bottom for work/break
+        // Main timer numbers in center (larger size since no phase text)
         paint.setTextSize(8);
-        String indicator = isWorkSession ? "●" : "○"; // Single dot indicator
-        canvas.drawText(indicator, 12.5f, 22, paint);
+        canvas.drawText(timeText, 12.5f, 16, paint);
+
+        // Single pixel indicator at bottom for work sessions only
+        if (isWorkSession) {
+            paint.setTextSize(4);
+            canvas.drawText("•", 12.5f, 22, paint);
+        }
+        // For break sessions, show nothing at the bottom
 
         return bitmap;
     }
