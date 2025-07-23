@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Glyph Pomodoro Timer</string>
+    <string name="pomodoro_toy_name">Pomodoro Timer</string>
+    <string name="pomodoro_toy_summary">25-minute work sessions with 5-minute breaks. Long press to start/skip.</string>
+</resources>

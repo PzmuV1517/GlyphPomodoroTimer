@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Required permission for Glyph Matrix -->
+    <uses-permission android:name="com.nothing.ketchum.permission.ENABLE"/>
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.GlyphPomodoroTimer">
+
+        <!-- Pomodoro Timer Glyph Toy Service -->
+        <service android:name=".PomodoroTimerService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.nothing.glyph.TOY"/>
+            </intent-filter>
+
+            <!-- Required: Toy name displayed in settings -->
+            <meta-data
+                android:name="com.nothing.glyph.toy.name"
+                android:resource="@string/pomodoro_toy_name"/>
+
+            <!-- Required: Preview image for settings -->
+            <meta-data
+                android:name="com.nothing.glyph.toy.image"
+                android:resource="@drawable/pomodoro_preview"/>
+
+            <!-- Optional: Description of the toy -->
+            <meta-data
+                android:name="com.nothing.glyph.toy.summary"
+                android:resource="@string/pomodoro_toy_summary"/>
+
+            <!-- Optional: Enable long press functionality -->
+            <meta-data
+                android:name="com.nothing.glyph.toy.longpress"
+                android:value="1"/>
+        </service>
+
+    </application>
+
+</manifest>
